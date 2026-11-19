@@ -80,6 +80,11 @@
       <p><b>Android (Chrome):</b> open this page, tap the ⋮ menu and choose “Add to Home screen”.<br>
       <b>iPhone (Safari):</b> tap Share and choose “Add to Home Screen”.</p>
     </details>
+    <div id="copybox" style="display:none;margin:10px 0">
+      <button id="copybtn" type="button" style="font-family:'IM Fell English SC',serif;font-size:15px;background:var(--ink);color:var(--paper);border:0;padding:10px 14px;cursor:pointer">Copy today's news.json</button>
+      <span id="copymsg" style="margin-left:8px"></span>
+      <textarea id="copyarea" readonly style="display:none;width:100%;height:140px;margin-top:8px;font-family:monospace;font-size:12px"></textarea>
+    </div>
     <p>Updated automatically every day. Summaries are written with the help of AI; tap “Read more” for the full story at its original source.</p>
   </footer>
 </div>
@@ -95,7 +100,19 @@ const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&g
 const safeUrl=u=>/^https?:\/\//.test(u||'')?u:'#';
 function more(x){return `<div class="meta"><span class="src">${esc(x.fuente)}</span><a class="more" href="${esc(safeUrl(x.url))}" target="_blank" rel="noopener">Read more →</a></div>`}
 function para(x){return x.para_ti?`<p class="para"><b>Why it matters to you:</b> ${esc(x.para_ti)}</p>`:''}
+let DATA=null;
+function setupCopy(){
+  if(location.hostname.endsWith('github.io')) return;
+  const box=document.getElementById('copybox'),btn=document.getElementById('copybtn'),msg=document.getElementById('copymsg'),ta=document.getElementById('copyarea');
+  box.style.display='block';
+  btn.addEventListener('click',async()=>{
+    const txt=JSON.stringify(DATA,null,2);
+    try{await navigator.clipboard.writeText(txt);msg.textContent='Copied! Now paste it into news.json on GitHub.';}
+    catch(e){ta.style.display='block';ta.value=txt;ta.focus();ta.select();msg.textContent='Long-press the text below, Select all, then Copy.';}
+  });
+}
 function render(d){
+  DATA=d;
   document.getElementById('fecha').textContent=d.fecha_texto||d.fecha;
   const today=new Date().toLocaleDateString('en-CA',{timeZone:'America/Toronto'});
   if(d.fecha && d.fecha<today) document.getElementById('stale').style.display='block';
@@ -110,8 +127,8 @@ function render(d){
   if(d.palabra) h+=`<div class="word"><div class="t">Word of the day</div><div class="w">${esc(d.palabra.termino)}</div><div>${esc(d.palabra.definicion)}</div></div>`;
   document.getElementById('main').innerHTML=h;
 }
-fetch('news.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.json()}).then(render)
-  .catch(()=>{document.getElementById('main').innerHTML='<div class="err">Today's edition could not be loaded. Try reloading the page.</div>'});
+fetch('news.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.json()}).then(d=>{render(d);setupCopy();})
+  .catch(()=>{document.getElementById('main').innerHTML='<div class="err">Today’s edition could not be loaded. Try reloading the page.</div>'});
 </script>
 </body>
 </html>
