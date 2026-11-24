@@ -69,17 +69,18 @@
   .gazette-subscribe input{border:1px solid var(--sepia);color:var(--ink);background:#fff}
   .gazette-subscribe button{border:0;background:var(--accent);color:#fff;font-weight:bold;cursor:pointer}
   .gazette-subscribe .powered-by-line{display:inline-flex;align-items:center;gap:5px;margin-top:7px;color:var(--sepia);font-size:13px}
+  footer .edition-schedule{margin-bottom:4px}
+  #edition-countdown{margin-top:0;color:var(--accent);font-weight:bold;font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
 <div class="sheet">
-  <div class="topline"><span>Daily edition</span><span>Price: a two-minute read</span></div>
+  <div class="topline"><span>News edition</span><span>Price: a two-minute read</span></div>
   <header class="masthead">
     <h1>The Oracle Gazette</h1>
     <div class="motto">News on artificial intelligence, robots and jobs, in plain English</div>
   </header>
   <div class="dateline"><span id="fecha">…</span><span>Canada · The World</span></div>
-  <div class="stale" id="stale">This is the latest edition. Today's is still on the press.</div>
   <main id="main"><div class="err">The morning post is on its way…</div></main>
   <footer>
     <details>
@@ -88,11 +89,13 @@
       <b>iPhone (Safari):</b> tap Share and choose “Add to Home Screen”.</p>
     </details>
     <div id="copybox" style="display:none;margin:10px 0">
-      <button id="copybtn" type="button" style="font-family:'IM Fell English SC',serif;font-size:15px;background:var(--ink);color:var(--paper);border:0;padding:10px 14px;cursor:pointer">Copy today's news.json</button>
+      <button id="copybtn" type="button" style="font-family:'IM Fell English SC',serif;font-size:15px;background:var(--ink);color:var(--paper);border:0;padding:10px 14px;cursor:pointer">Copy edition JSON</button>
       <span id="copymsg" style="margin-left:8px"></span>
       <textarea id="copyarea" readonly style="display:none;width:100%;height:140px;margin-top:8px;font-family:monospace;font-size:12px"></textarea>
     </div>
-    <p>Updated automatically every day. Summaries are written with the help of AI; tap “Read more” for the full story at its original source.</p>
+    <p class="edition-schedule">New editions Monday, Thursday and Saturday at 8 a.m. Toronto time.</p>
+    <p id="edition-countdown" role="timer" hidden></p>
+    <p>AI-assisted summaries link to the original sources.</p>
     <div class="gazette-subscribe">
       <form action="https://api.follow.it/subscription-form/bVVFbjBhOVRUVnV1NU5xZHVaVURLQU50UzRhYkRRc2JtbFM1aWpaR0tIM29IRy9iQVBQbEMza3ZhNWR5TmhYZzZuTVBlRTMzcGMrbERlaUo3SXpKVnNjb210RSttM1ovbFYyV2h2N0VLMktURHlJNkh0Y2FwUUpmWU5XVEtNeTZ8dnlNTHQzdmU1T1lURzBPZEl0RFVYckh4dkVsNDR2SXdISTAxa2JqOFlaUT0=/8" method="post">
         <label for="gazette-subscribe-email">Enter your email to get new issues</label>
@@ -129,8 +132,6 @@ function setupCopy(){
 function render(d){
   DATA=d;
   document.getElementById('fecha').textContent=d.fecha_texto||d.fecha;
-  const today=new Date().toLocaleDateString('en-CA',{timeZone:'America/Toronto'});
-  if(d.fecha && d.fecha<today) document.getElementById('stale').style.display='block';
   const p=d.portada||{};
   let h=`<div class="lead fadein">${PORTRAIT}<h2>${esc(p.titular)}</h2><p>${esc(p.resumen)}</p>${para(p)}${more(p)}</div><div class="cols">`;
   for(const s of d.secciones||[]){
@@ -139,13 +140,39 @@ function render(d){
     h+='</section>';
   }
   h+='</div>';
-  if(d.palabra) h+=`<div class="word"><div class="t">Word of the day</div><div class="w">${esc(d.palabra.termino)}</div><div>${esc(d.palabra.definicion)}</div></div>`;
+  if(d.palabra) h+=`<div class="word"><div class="t">Word of the edition</div><div class="w">${esc(d.palabra.termino)}</div><div>${esc(d.palabra.definicion)}</div></div>`;
   document.getElementById('main').innerHTML=h;
 }
 const edition=new URLSearchParams(location.search).get('edition');
 const editionPath=edition && /^\d{4}-\d{2}-\d{2}$/.test(edition) ? 'archive/'+edition+'.json' : 'news.json';
 fetch(editionPath,{cache:'no-store'}).then(r=>r.ok?r:editionPath!=='news.json'?fetch('news.json',{cache:'no-store'}):r).then(r=>{if(!r.ok)throw 0;return r.json()}).then(d=>{render(d);setupCopy();})
-  .catch(()=>{document.getElementById('main').innerHTML='<div class="err">Today’s edition could not be loaded. Try reloading the page.</div>'});
+  .catch(()=>{document.getElementById('main').innerHTML='<div class="err">This edition could not be loaded. Try reloading the page.</div>'});
+function nextEdition(now, timeZone) {
+  const dateParts = new Intl.DateTimeFormat('en-CA', {timeZone, year:'numeric', month:'numeric', day:'numeric'}).formatToParts(now);
+  const {year, month, day} = Object.fromEntries(dateParts.map(({type, value}) => [type, Number(value)]));
+  const localHour = new Intl.DateTimeFormat('en-GB', {timeZone, hour:'numeric', hourCycle:'h23'});
+  for(let offset = 0; offset <= 7; offset++){
+    const noon = new Date(Date.UTC(year, month - 1, day + offset, 12));
+    if(![1, 4, 6].includes(noon.getUTCDay())) continue;
+    const target = new Date(noon.getTime() + (8 - Number(localHour.format(noon))) * 3600000);
+    if(target > now) return target;
+  }
+}
+const editionTimeZone = 'America/Toronto';
+const countdown = document.getElementById('edition-countdown');
+let nextPublication = nextEdition(new Date(), editionTimeZone);
+function updateCountdown(){
+  const now = new Date();
+  if (now >= nextPublication) nextPublication = nextEdition(now, editionTimeZone);
+  const minutesLeft = Math.ceil((nextPublication - now) / 60000);
+  const days = Math.floor(minutesLeft / 1440);
+  const hours = Math.floor(minutesLeft / 60) % 24;
+  const minutes = minutesLeft % 60;
+  countdown.textContent = 'Next scheduled edition in ' + days + 'd ' + hours + 'h ' + minutes + 'm';
+  countdown.hidden = false;
+}
+updateCountdown();
+setInterval(updateCountdown, 1000);
 </script>
 </body>
 </html>
