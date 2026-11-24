@@ -70,7 +70,22 @@
   .gazette-subscribe button{border:0;background:var(--accent);color:#fff;font-weight:bold;cursor:pointer}
   .gazette-subscribe .powered-by-line{display:inline-flex;align-items:center;gap:5px;margin-top:7px;color:var(--sepia);font-size:13px}
   footer .edition-schedule{margin-bottom:4px}
-  #edition-countdown{margin-top:0;color:var(--accent);font-weight:bold;font-variant-numeric:tabular-nums}
+  .edition-clock{
+    max-width:500px;margin:16px auto 18px;padding:14px clamp(8px,3vw,20px) 18px;
+    color:#f4e8cb;background:radial-gradient(ellipse at top,#563c2c,#2b2118 75%);
+    border:4px double #d0b27a;border-radius:18px 18px 6px 6px;
+    box-shadow:0 4px 10px rgba(43,33,24,.28);text-align:center;
+  }
+  .edition-clock h2{margin:0 0 12px;color:#f4e8cb;font:400 clamp(19px,5vw,28px)/1.15 'IM Fell English SC',Georgia,serif}
+  .edition-clock-dial{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(3px,1vw,8px)}
+  .edition-clock-dial span{
+    min-width:0;padding:7px 0 6px;border:1px solid #a18052;border-radius:7px;
+    background:#211810;color:#e5c98f;font:400 clamp(11px,2.7vw,15px)/1.2 'IM Fell English SC',Georgia,serif;
+  }
+  .edition-clock-dial strong{
+    display:block;margin-bottom:4px;color:#fff1d1;
+    font:700 clamp(22px,7vw,46px)/1 'Playfair Display',Georgia,serif;font-variant-numeric:lining-nums tabular-nums;
+  }
 </style>
 </head>
 <body>
@@ -94,7 +109,15 @@
       <textarea id="copyarea" readonly style="display:none;width:100%;height:140px;margin-top:8px;font-family:monospace;font-size:12px"></textarea>
     </div>
     <p class="edition-schedule">New editions Monday, Thursday and Saturday at 8 a.m. Toronto time.</p>
-    <p id="edition-countdown" role="timer" hidden></p>
+    <section class="edition-clock" id="edition-countdown" aria-labelledby="edition-clock-title" hidden>
+      <h2 id="edition-clock-title">Next Scheduled Edition</h2>
+      <div class="edition-clock-dial" role="timer" aria-label="Time until the next edition">
+        <span><strong id="clock-days"></strong>Days</span>
+        <span><strong id="clock-hours"></strong>Hours</span>
+        <span><strong id="clock-minutes"></strong>Minutes</span>
+        <span><strong id="clock-seconds"></strong>Seconds</span>
+      </div>
+    </section>
     <p>AI-assisted summaries link to the original sources.</p>
     <div class="gazette-subscribe">
       <form action="https://api.follow.it/subscription-form/bVVFbjBhOVRUVnV1NU5xZHVaVURLQU50UzRhYkRRc2JtbFM1aWpaR0tIM29IRy9iQVBQbEMza3ZhNWR5TmhYZzZuTVBlRTMzcGMrbERlaUo3SXpKVnNjb210RSttM1ovbFYyV2h2N0VLMktURHlJNkh0Y2FwUUpmWU5XVEtNeTZ8dnlNTHQzdmU1T1lURzBPZEl0RFVYckh4dkVsNDR2SXdISTAxa2JqOFlaUT0=/8" method="post">
@@ -160,15 +183,21 @@ function nextEdition(now, timeZone) {
 }
 const editionTimeZone = 'America/Toronto';
 const countdown = document.getElementById('edition-countdown');
+const clockDigits = ['days', 'hours', 'minutes', 'seconds'].map(unit => document.getElementById('clock-' + unit));
 let nextPublication = nextEdition(new Date(), editionTimeZone);
 function updateCountdown(){
   const now = new Date();
   if (now >= nextPublication) nextPublication = nextEdition(now, editionTimeZone);
-  const minutesLeft = Math.ceil((nextPublication - now) / 60000);
-  const days = Math.floor(minutesLeft / 1440);
-  const hours = Math.floor(minutesLeft / 60) % 24;
-  const minutes = minutesLeft % 60;
-  countdown.textContent = 'Next scheduled edition in ' + days + 'd ' + hours + 'h ' + minutes + 'm';
+  const secondsLeft = Math.ceil((nextPublication - now) / 1000);
+  const values = [
+    Math.floor(secondsLeft / 86400),
+    Math.floor(secondsLeft / 3600) % 24,
+    Math.floor(secondsLeft / 60) % 60,
+    secondsLeft % 60
+  ];
+  clockDigits.forEach((digit, index) => {
+    digit.textContent = String(values[index]).padStart(2, '0');
+  });
   countdown.hidden = false;
 }
 updateCountdown();
