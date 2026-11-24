@@ -1,13 +1,13 @@
 {
-  "fecha": "2026-11-19",
-  "fecha_texto": "Thursday, November 19, 2026",
-  "actualizado": "Nov 19, 2026",
+  "fecha": "2026-11-24",
+  "fecha_texto": "Tuesday, November 24, 2026",
+  "actualizado": "Nov 24, 2026",
   "portada": {
-    "titular": "Carney calls for global rules on artificial intelligence",
-    "resumen": "Speaking at the APEC summit in Shenzhen, China, Prime Minister Mark Carney said having no worldwide rules for AI is an enormous risk and that it is past time to create them. He said he discussed the idea with Chinese President Xi Jinping, and that leaders of the top AI labs share his concerns.",
-    "para_ti": "Canada wants a say in how AI is controlled around the world, instead of just following rules written by others.",
-    "fuente": "AFP / Free Malaysia Today",
-    "url": "https://www.freemalaysiatoday.com/category/world/2026/11/18/canada-s-pm-says-lack-of-global-governance-on-ai-an-enormous-risk"
+    "titular": "Robots are learning when to ask for help",
+    "resumen": "Researchers at the Technical University of Munich announced an AI model on November 23 that helps robots identify tasks beyond their abilities. Instead of pressing ahead when uncertain, a robot can stop and seek human assistance. The work is a research advance, not proof that robots are ready for every workplace.",
+    "para_ti": "Knowing when to stop could be as valuable as knowing how to act, especially in factories and other shared workplaces.",
+    "fuente": "Technical University of Munich",
+    "url": "https://www.tum.de/en/news-and-events/all-news/press-releases/details/self-reflective-robot-recognizes-its-limitations"
   },
   "secciones": [
     {
@@ -15,17 +15,18 @@
       "nombre": "Canada",
       "items": [
         {
-          "titular": "Budget 2026 bets on made-in-Canada data centres",
-          "resumen": "The federal budget released on November 5 plans 500 megawatts of computing power under Canadian control and financial support for local AI companies such as Cohere. It also creates a new agency, Digital Transformation Canada.",
-          "para_ti": "More homegrown infrastructure could mean tech jobs here and better protection for Canadians' data.",
-          "fuente": "Gowling WLG",
-          "url": "https://gowlingwlg.com/en/insights-resources/articles/2026/investing-in-intelligence"
+          "titular": "Ontario AI funding reaches a deadline today",
+          "resumen": "November 24 is the submission deadline for projects with eligible costs before March 31, 2027 under the expanded regional AI initiative in southern Ontario. The broader application window runs until January 19, 2027.",
+          "para_ti": "Canadian businesses considering AI adoption should check eligibility and project timing.",
+          "fuente": "Government of Canada",
+          "url": "https://www.canada.ca/en/economic-development-southern-ontario/news/2026/10/government-of-canada-expands-support-for-artificial-intelligence-adoption-and-commercialization-in-southern-ontario.html"
         },
         {
-          "titular": "Ottawa and Silicon Valley compete for Canada's computing power",
-          "resumen": "While the government wants data centres for Canadian companies, U.S. tech giants are also looking north as opposition to new data centres grows in the United States.",
-          "fuente": "The Globe and Mail",
-          "url": "https://www.theglobeandmail.com/business/article-ottawa-silicon-valley-after-canadian-ai-processing-power-who-will-win/"
+          "titular": "Canada examines AI's impact on culture",
+          "resumen": "A government report published November 23 summarizes discussions from the national AI and culture summit held in March. It follows the appointment of a new advisory council on AI and culture.",
+          "para_ti": "Creative professionals have a stake in how AI policy balances innovation and human creativity.",
+          "fuente": "Canadian Heritage",
+          "url": "https://www.canada.ca/en/canadian-heritage/services/artificial-intelligence-culture/engagement-consultations/national-summit/what-we-heard.html"
         }
       ]
     },
@@ -34,22 +35,18 @@
       "nombre": "The World",
       "items": [
         {
-          "titular": "Anthropic, maker of Claude, goes public",
-          "resumen": "The company priced its shares at $83, above the expected range, and begins trading on the Nasdaq under the symbol ANT. It is one of the biggest stock market debuts ever.",
-          "fuente": "TechCrunch",
-          "url": "https://techcrunch.com/2026/11/18/anthropic-reportedly-prices-ipo-at-83-a-share-above-projected-range/"
+          "titular": "OpenAI offers hands-on AI help to small businesses",
+          "resumen": "OpenWorks connects eligible independent US businesses with local AI practitioners for practical assistance at no cost to participating owners. It is a pilot, not a worldwide rollout.",
+          "para_ti": "Small companies may benefit more from help solving specific problems than from simply buying another software subscription.",
+          "fuente": "OpenAI",
+          "url": "https://openai.com/openworks/"
         },
         {
-          "titular": "Google launches Gemini 4 Neon, a fast and cheaper model",
-          "resumen": "It is a mid-sized model built to finish tasks quickly in coding, office work and science. Google says it comes close to much larger models on several tests.",
-          "fuente": "Sam on AI",
-          "url": "https://samonai.substack.com/p/ai-brief-november-19-2026"
-        },
-        {
-          "titular": "Nvidia stops shipping some AI chips to China",
-          "resumen": "The company halted shipments of certain chips even though Washington had already approved their sale. Tension between the U.S. and China keeps shaping the AI industry.",
-          "fuente": "The Neuron",
-          "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-november-19-2026/"
+          "titular": "AI investment enters the central bank debate",
+          "resumen": "Reuters reported on November 24 that US Federal Reserve officials are weighing the implications of AI investment for productivity, inflation and financial stability.",
+          "para_ti": "The AI boom could influence borrowing costs and investment decisions far beyond the technology sector.",
+          "fuente": "Reuters",
+          "url": "https://www.reuters.com/business/ai-boom-looms-over-warshs-fed-inflation-worries-grow-2026-11-24/"
         }
       ]
     },
@@ -58,23 +55,18 @@
       "nombre": "Robotics",
       "items": [
         {
-          "titular": "Big money flows into humanoid robots",
-          "resumen": "Germany's Agile Robots raised $500 million and is now valued at $8.5 billion. And U.S.-based Agility Robotics, maker of the Digit robot, is now listed on the Nasdaq.",
-          "para_ti": "Human-shaped robots are moving from demos into real warehouses and factories.",
-          "fuente": "Metrology News",
-          "url": "https://metrology.news/humanoid-robotics-sector-gains-momentum-as-agile-robots-raises-500m-and-agility-goes-public/"
+          "titular": "The robot hand remains a hard engineering problem",
+          "resumen": "A November 21 Guardian report explores efforts to reproduce human dexterity in machines, including potential uses in manufacturing, care and hazardous environments.",
+          "para_ti": "Manual work in unpredictable environments remains harder to automate than many repetitive factory tasks.",
+          "fuente": "The Guardian",
+          "url": "https://www.theguardian.com/technology/2026/nov/21/robot-hands-future-of-humanity-ai"
         },
         {
-          "titular": "China leads the robot race",
-          "resumen": "With its huge manufacturing base, China has become a natural home for AI-powered robots. The hardest part is still copying the human hand: one Shanghai model uses 27 motors in each hand.",
-          "fuente": "Bloomberg",
-          "url": "https://www.bloomberg.com/news/articles/2026-11-18/china-robot-advances-offer-more-hardware-forward-path-for-ai"
-        },
-        {
-          "titular": "Military humanoid robots within 18 months",
-          "resumen": "The head of German defence company Rheinmetall said it could show prototypes of humanoid robots for military use in 15 to 18 months.",
-          "fuente": "Defence Industry Europe",
-          "url": "https://defence-industry.eu/rheinmetall-ceo-says-humanoid-robot-prototypes-for-military-use-could-be-ready-in-15-to-18-months-as-development-proceeds/"
+          "titular": "Canadian construction robotics attracts fresh capital",
+          "resumen": "An Edmonton technology roundup on November 24 highlighted Promise Robotics' previously announced C$40 million Series B financing. The company uses robotic production systems to manufacture housing components.",
+          "para_ti": "Factory automation could change how homes are built, although funding alone does not guarantee lower housing costs.",
+          "fuente": "Taproot Edmonton",
+          "url": "https://edmonton.taproot.news/roundups/tech/2026/11/24"
         }
       ]
     },
@@ -83,29 +75,24 @@
       "nombre": "Jobs",
       "items": [
         {
-          "titular": "The AI layoff wave hasn't arrived… yet",
-          "resumen": "Goldman Sachs says layoffs stayed low in 2026, but it thinks AI's impact is only delayed and that up to 1 in 11 workers could be displaced. Young workers aged 22 to 25 in AI-exposed jobs already have about 19% less employment than expected.",
-          "para_ti": "Companies are hiring less rather than firing, so getting your first job is what's getting harder.",
-          "fuente": "Fortune",
-          "url": "https://fortune.com/2026/11/16/why-no-ai-layoff-wave-goldman-sachs-outlook-recession-jobs/"
-        },
-        {
-          "titular": "People who lose jobs to AI take longer to find new ones",
-          "resumen": "A Goldman Sachs analysis found these workers took about a month longer to get back to work. Older workers are the most vulnerable.",
+          "titular": "AI's employment effects may show up in hiring first",
+          "resumen": "Axios reported on November 23 on research suggesting slower hiring could be a more visible effect of AI than rising unemployment. The researchers caution that other economic factors may also explain the shortfall.",
+          "para_ti": "Entry-level workers may need more opportunities to build experience as routine assignments become automated.",
           "fuente": "Axios",
-          "url": "https://www.axios.com/2026/11/03/ai-employment-technology-goldman-sachs"
+          "url": "https://www.axios.com/2026/11/23/jobs-hiring-decline-ai"
         },
         {
-          "titular": "The \"rebound\": companies rehire people AI replaced",
-          "resumen": "In a U.S. survey, nearly 1 in 5 people replaced by AI said they were later asked to come back. Many are returning with demands for higher pay and more job security.",
-          "fuente": "Fortune",
-          "url": "https://fortune.com/2026/11/09/ai-rebounding-20-us-workers-replaced-higher-pay-job-security/"
+          "titular": "Employers also see new opportunities in AI work",
+          "resumen": "MarketWatch reported on November 23 that a ZipRecruiter study points toward stronger hiring in 2027, including opportunities associated with AI. These are expectations, not guaranteed outcomes.",
+          "para_ti": "Learning to use AI alongside existing professional skills may be more useful than assuming every job will disappear.",
+          "fuente": "MarketWatch",
+          "url": "https://www.marketwatch.com/story/more-ai-jobs-are-coming-thats-one-of-the-big-hiring-trends-in-2027-3d810209"
         }
       ]
     }
   ],
   "palabra": {
-    "termino": "Sovereign compute",
-    "definicion": "Data centres and chips located inside a country and under its laws, so it doesn't have to depend on foreign companies or governments."
+    "termino": "Embodied AI",
+    "definicion": "Artificial intelligence that perceives and acts in the physical world through a machine, such as a robot equipped with cameras, sensors and motors."
   }
 }
