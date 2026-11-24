@@ -63,6 +63,12 @@
   @keyframes breath{0%,100%{opacity:.35}50%{opacity:.85}}
   @keyframes sway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
   @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .gazette-subscribe{max-width:390px;margin:14px auto 8px;padding:12px 16px;background:var(--paper);border:1px solid var(--sepia);border-radius:6px}
+  .gazette-subscribe label{display:block;font-weight:bold}
+  .gazette-subscribe input,.gazette-subscribe button{display:block;width:100%;min-height:44px;margin-top:8px;padding:6px 10px;border-radius:6px;font:inherit;text-align:center}
+  .gazette-subscribe input{border:1px solid var(--sepia);color:var(--ink);background:#fff}
+  .gazette-subscribe button{border:0;background:var(--accent);color:#fff;font-weight:bold;cursor:pointer}
+  .gazette-subscribe .powered-by-line{display:inline-flex;align-items:center;gap:5px;margin-top:7px;color:var(--sepia);font-size:13px}
 </style>
 </head>
 <body>
@@ -71,7 +77,15 @@
   <header class="masthead">
     <h1>The Oracle Gazette</h1>
     <div class="motto">News on artificial intelligence, robots and jobs, in plain English</div>
-    <div style="margin:10px 0 4px;font-size:14px"><a class="more" href="https://follow.it/https://ramayako.github.io/Newsletter-RamayaKo/" target="_blank" rel="noopener">Subscribe for free via follow.it</a> · <a class="more" href="feed.xml">RSS feed</a></div>
+    <div class="gazette-subscribe">
+      <form action="https://api.follow.it/subscription-form/bVVFbjBhOVRUVnV1NU5xZHVaVURLQU50UzRhYkRRc2JtbFM1aWpaR0tIM29IRy9iQVBQbEMza3ZhNWR5TmhYZzZuTVBlRTMzcGMrbERlaUo3SXpKVnNjb210RSttM1ovbFYyV2h2N0VLMktURHlJNkh0Y2FwUUpmWU5XVEtNeTZ8dnlNTHQzdmU1T1lURzBPZEl0RFVYckh4dkVsNDR2SXdISTAxa2JqOFlaUT0=/8" method="post">
+        <label for="gazette-subscribe-email">Enter your email to get new issues</label>
+        <input id="gazette-subscribe-email" type="email" name="email" required autocomplete="email" placeholder="Enter your email" spellcheck="false">
+        <button type="submit">Subscribe</button>
+      </form>
+      <a href="https://follow.it" class="powered-by-line">Powered by <img src="https://follow.it/images/colored-logo.svg" alt="follow.it" height="17"></a>
+    </div>
+    <div style="margin:10px 0 4px;font-size:14px"><a class="more" href="feed.xml">RSS feed</a></div>
   </header>
   <div class="dateline"><span id="fecha">…</span><span>Canada · The World</span></div>
   <div class="stale" id="stale">This is the latest edition. Today's is still on the press.</div>
