@@ -1,0 +1,111 @@
+{
+  "fecha": "2026-11-19",
+  "fecha_texto": "Thursday, November 19, 2026",
+  "actualizado": "Nov 19, 2026",
+  "portada": {
+    "titular": "Carney calls for global rules on artificial intelligence",
+    "resumen": "Speaking at the APEC summit in Shenzhen, China, Prime Minister Mark Carney said having no worldwide rules for AI is an enormous risk and that it is past time to create them. He said he discussed the idea with Chinese President Xi Jinping, and that leaders of the top AI labs share his concerns.",
+    "para_ti": "Canada wants a say in how AI is controlled around the world, instead of just following rules written by others.",
+    "fuente": "AFP / Free Malaysia Today",
+    "url": "https://www.freemalaysiatoday.com/category/world/2026/11/18/canada-s-pm-says-lack-of-global-governance-on-ai-an-enormous-risk"
+  },
+  "secciones": [
+    {
+      "id": "canada",
+      "nombre": "Canada",
+      "items": [
+        {
+          "titular": "Budget 2026 bets on made-in-Canada data centres",
+          "resumen": "The federal budget released on November 5 plans 500 megawatts of computing power under Canadian control and financial support for local AI companies such as Cohere. It also creates a new agency, Digital Transformation Canada.",
+          "para_ti": "More homegrown infrastructure could mean tech jobs here and better protection for Canadians' data.",
+          "fuente": "Gowling WLG",
+          "url": "https://gowlingwlg.com/en/insights-resources/articles/2026/investing-in-intelligence"
+        },
+        {
+          "titular": "Ottawa and Silicon Valley compete for Canada's computing power",
+          "resumen": "While the government wants data centres for Canadian companies, U.S. tech giants are also looking north as opposition to new data centres grows in the United States.",
+          "fuente": "The Globe and Mail",
+          "url": "https://www.theglobeandmail.com/business/article-ottawa-silicon-valley-after-canadian-ai-processing-power-who-will-win/"
+        }
+      ]
+    },
+    {
+      "id": "mundo",
+      "nombre": "The World",
+      "items": [
+        {
+          "titular": "Anthropic, maker of Claude, goes public",
+          "resumen": "The company priced its shares at $83, above the expected range, and begins trading on the Nasdaq under the symbol ANT. It is one of the biggest stock market debuts ever.",
+          "fuente": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/18/anthropic-reportedly-prices-ipo-at-83-a-share-above-projected-range/"
+        },
+        {
+          "titular": "Google launches Gemini 4 Neon, a fast and cheaper model",
+          "resumen": "It is a mid-sized model built to finish tasks quickly in coding, office work and science. Google says it comes close to much larger models on several tests.",
+          "fuente": "Sam on AI",
+          "url": "https://samonai.substack.com/p/ai-brief-november-19-2026"
+        },
+        {
+          "titular": "Nvidia stops shipping some AI chips to China",
+          "resumen": "The company halted shipments of certain chips even though Washington had already approved their sale. Tension between the U.S. and China keeps shaping the AI industry.",
+          "fuente": "The Neuron",
+          "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-november-19-2026/"
+        }
+      ]
+    },
+    {
+      "id": "robotica",
+      "nombre": "Robotics",
+      "items": [
+        {
+          "titular": "Big money flows into humanoid robots",
+          "resumen": "Germany's Agile Robots raised $500 million and is now valued at $8.5 billion. And U.S.-based Agility Robotics, maker of the Digit robot, is now listed on the Nasdaq.",
+          "para_ti": "Human-shaped robots are moving from demos into real warehouses and factories.",
+          "fuente": "Metrology News",
+          "url": "https://metrology.news/humanoid-robotics-sector-gains-momentum-as-agile-robots-raises-500m-and-agility-goes-public/"
+        },
+        {
+          "titular": "China leads the robot race",
+          "resumen": "With its huge manufacturing base, China has become a natural home for AI-powered robots. The hardest part is still copying the human hand: one Shanghai model uses 27 motors in each hand.",
+          "fuente": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-11-18/china-robot-advances-offer-more-hardware-forward-path-for-ai"
+        },
+        {
+          "titular": "Military humanoid robots within 18 months",
+          "resumen": "The head of German defence company Rheinmetall said it could show prototypes of humanoid robots for military use in 15 to 18 months.",
+          "fuente": "Defence Industry Europe",
+          "url": "https://defence-industry.eu/rheinmetall-ceo-says-humanoid-robot-prototypes-for-military-use-could-be-ready-in-15-to-18-months-as-development-proceeds/"
+        }
+      ]
+    },
+    {
+      "id": "empleo",
+      "nombre": "Jobs",
+      "items": [
+        {
+          "titular": "The AI layoff wave hasn't arrived… yet",
+          "resumen": "Goldman Sachs says layoffs stayed low in 2026, but it thinks AI's impact is only delayed and that up to 1 in 11 workers could be displaced. Young workers aged 22 to 25 in AI-exposed jobs already have about 19% less employment than expected.",
+          "para_ti": "Companies are hiring less rather than firing, so getting your first job is what's getting harder.",
+          "fuente": "Fortune",
+          "url": "https://fortune.com/2026/11/16/why-no-ai-layoff-wave-goldman-sachs-outlook-recession-jobs/"
+        },
+        {
+          "titular": "People who lose jobs to AI take longer to find new ones",
+          "resumen": "A Goldman Sachs analysis found these workers took about a month longer to get back to work. Older workers are the most vulnerable.",
+          "fuente": "Axios",
+          "url": "https://www.axios.com/2026/11/03/ai-employment-technology-goldman-sachs"
+        },
+        {
+          "titular": "The \"rebound\": companies rehire people AI replaced",
+          "resumen": "In a U.S. survey, nearly 1 in 5 people replaced by AI said they were later asked to come back. Many are returning with demands for higher pay and more job security.",
+          "fuente": "Fortune",
+          "url": "https://fortune.com/2026/11/09/ai-rebounding-20-us-workers-replaced-higher-pay-job-security/"
+        }
+      ]
+    }
+  ],
+  "palabra": {
+    "termino": "Sovereign compute",
+    "definicion": "Data centres and chips located inside a country and under its laws, so it doesn't have to depend on foreign companies or governments."
+  }
+}
