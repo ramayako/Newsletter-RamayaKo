@@ -1,0 +1,98 @@
+{
+  "fecha": "2026-11-24",
+  "fecha_texto": "Tuesday, November 24, 2026",
+  "actualizado": "Nov 24, 2026",
+  "portada": {
+    "titular": "Robots are learning when to ask for help",
+    "resumen": "Researchers at the Technical University of Munich announced an AI model on November 23 that helps robots identify tasks beyond their abilities. Instead of pressing ahead when uncertain, a robot can stop and seek human assistance. The work is a research advance, not proof that robots are ready for every workplace.",
+    "para_ti": "Knowing when to stop could be as valuable as knowing how to act, especially in factories and other shared workplaces.",
+    "fuente": "Technical University of Munich",
+    "url": "https://www.tum.de/en/news-and-events/all-news/press-releases/details/self-reflective-robot-recognizes-its-limitations"
+  },
+  "secciones": [
+    {
+      "id": "canada",
+      "nombre": "Canada",
+      "items": [
+        {
+          "titular": "Ontario AI funding reaches a deadline today",
+          "resumen": "November 24 is the submission deadline for projects with eligible costs before March 31, 2027 under the expanded regional AI initiative in southern Ontario. The broader application window runs until January 19, 2027.",
+          "para_ti": "Canadian businesses considering AI adoption should check eligibility and project timing.",
+          "fuente": "Government of Canada",
+          "url": "https://www.canada.ca/en/economic-development-southern-ontario/news/2026/10/government-of-canada-expands-support-for-artificial-intelligence-adoption-and-commercialization-in-southern-ontario.html"
+        },
+        {
+          "titular": "Canada examines AI's impact on culture",
+          "resumen": "A government report published November 23 summarizes discussions from the national AI and culture summit held in March. It follows the appointment of a new advisory council on AI and culture.",
+          "para_ti": "Creative professionals have a stake in how AI policy balances innovation and human creativity.",
+          "fuente": "Canadian Heritage",
+          "url": "https://www.canada.ca/en/canadian-heritage/services/artificial-intelligence-culture/engagement-consultations/national-summit/what-we-heard.html"
+        }
+      ]
+    },
+    {
+      "id": "mundo",
+      "nombre": "The World",
+      "items": [
+        {
+          "titular": "OpenAI offers hands-on AI help to small businesses",
+          "resumen": "OpenWorks connects eligible independent US businesses with local AI practitioners for practical assistance at no cost to participating owners. It is a pilot, not a worldwide rollout.",
+          "para_ti": "Small companies may benefit more from help solving specific problems than from simply buying another software subscription.",
+          "fuente": "OpenAI",
+          "url": "https://openai.com/openworks/"
+        },
+        {
+          "titular": "AI investment enters the central bank debate",
+          "resumen": "Reuters reported on November 24 that US Federal Reserve officials are weighing the implications of AI investment for productivity, inflation and financial stability.",
+          "para_ti": "The AI boom could influence borrowing costs and investment decisions far beyond the technology sector.",
+          "fuente": "Reuters",
+          "url": "https://www.reuters.com/business/ai-boom-looms-over-warshs-fed-inflation-worries-grow-2026-11-24/"
+        }
+      ]
+    },
+    {
+      "id": "robotica",
+      "nombre": "Robotics",
+      "items": [
+        {
+          "titular": "The robot hand remains a hard engineering problem",
+          "resumen": "A November 21 Guardian report explores efforts to reproduce human dexterity in machines, including potential uses in manufacturing, care and hazardous environments.",
+          "para_ti": "Manual work in unpredictable environments remains harder to automate than many repetitive factory tasks.",
+          "fuente": "The Guardian",
+          "url": "https://www.theguardian.com/technology/2026/nov/21/robot-hands-future-of-humanity-ai"
+        },
+        {
+          "titular": "Canadian construction robotics attracts fresh capital",
+          "resumen": "An Edmonton technology roundup on November 24 highlighted Promise Robotics' previously announced C$40 million Series B financing. The company uses robotic production systems to manufacture housing components.",
+          "para_ti": "Factory automation could change how homes are built, although funding alone does not guarantee lower housing costs.",
+          "fuente": "Taproot Edmonton",
+          "url": "https://edmonton.taproot.news/roundups/tech/2026/11/24"
+        }
+      ]
+    },
+    {
+      "id": "empleo",
+      "nombre": "Jobs",
+      "items": [
+        {
+          "titular": "AI's employment effects may show up in hiring first",
+          "resumen": "Axios reported on November 23 on research suggesting slower hiring could be a more visible effect of AI than rising unemployment. The researchers caution that other economic factors may also explain the shortfall.",
+          "para_ti": "Entry-level workers may need more opportunities to build experience as routine assignments become automated.",
+          "fuente": "Axios",
+          "url": "https://www.axios.com/2026/11/23/jobs-hiring-decline-ai"
+        },
+        {
+          "titular": "Employers also see new opportunities in AI work",
+          "resumen": "MarketWatch reported on November 23 that a ZipRecruiter study points toward stronger hiring in 2027, including opportunities associated with AI. These are expectations, not guaranteed outcomes.",
+          "para_ti": "Learning to use AI alongside existing professional skills may be more useful than assuming every job will disappear.",
+          "fuente": "MarketWatch",
+          "url": "https://www.marketwatch.com/story/more-ai-jobs-are-coming-thats-one-of-the-big-hiring-trends-in-2027-3d810209"
+        }
+      ]
+    }
+  ],
+  "palabra": {
+    "termino": "Embodied AI",
+    "definicion": "Artificial intelligence that perceives and acts in the physical world through a machine, such as a robot equipped with cameras, sensors and motors."
+  }
+}
