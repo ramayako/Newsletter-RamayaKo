@@ -1,0 +1,84 @@
+{
+  "fecha": "2026-11-26",
+  "fecha_texto": "Thursday, November 26, 2026",
+  "actualizado": "Nov 26, 2026",
+  "portada": {
+    "titular": "Canada prepares a new AI computing announcement",
+    "resumen": "Canada's federal government said on November 25 that AI Minister Evan Solomon will announce measures in Toronto today at 10:15 a.m. Eastern time to help domestic companies develop and expand AI. Details had not been released at the time of this edition.",
+    "para_ti": "Access to computing power can determine whether smaller Canadian firms can compete with larger international developers.",
+    "fuente": "Government of Canada",
+    "url": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/11/government-of-canada-to-make-announcement-on-ai-compute.html"
+  },
+  "secciones": [
+    {
+      "id": "canada",
+      "nombre": "Canada",
+      "items": [
+        {
+          "titular": "Toronto startup wins engineering pitch competition",
+          "resumen": "Electronic Products & Technology reported on November 25 that Blueprint won Built in Canada 2026 with software that generates hardware design documentation, including wiring plans and parts lists, from a prompt.",
+          "para_ti": "Engineers could spend less time preparing initial documentation, but designs still need technical review.",
+          "fuente": "Electronic Products & Technology",
+          "url": "https://www.ept.ca/toronto-startup-wins-national-competition-for-ai-powered-hardware-design-platform/"
+        }
+      ]
+    },
+    {
+      "id": "mundo",
+      "nombre": "The World",
+      "items": [
+        {
+          "titular": "AI investment helps lift US economic growth",
+          "resumen": "Reuters reported on November 25 that the second estimate of US third-quarter GDP put annualized growth at 4.3%, up from 3.4%. Consumer spending and investment in AI contributed to the expansion.",
+          "para_ti": "AI spending is becoming economically significant, but GDP growth alone does not establish how its benefits are distributed.",
+          "fuente": "Reuters",
+          "url": "https://www.reuters.com/business/finance/us-third-quarter-gdp-growth-revised-sharply-higher-2026-11-25/"
+        },
+        {
+          "titular": "AI privacy concerns reach MiniMax",
+          "resumen": "Reuters reported on November 26 that a cybersecurity researcher identified MiniMax as an AI provider involved in an investigation in which private links submitted by users were accessed by unauthorized parties, despite requests not to retain data.",
+          "para_ti": "Avoid submitting confidential business information to AI services without checking their security and retention controls.",
+          "fuente": "Reuters",
+          "url": "https://www.reuters.com/world/data-chinese-ai-firm-minimax-accessed-by-unidentified-parties-researcher-says-2026-11-26/"
+        }
+      ]
+    },
+    {
+      "id": "robotica",
+      "nombre": "Robotics",
+      "items": [
+        {
+          "titular": "Singapore resort becomes a testing ground for robots",
+          "resumen": "On November 25, Resorts World Sentosa launched a programme to trial automation across its operations, including autonomous deliveries and cleaning assistance.",
+          "para_ti": "Real operating conditions can reveal whether robots are useful beyond controlled demonstrations.",
+          "fuente": "The Straits Times",
+          "url": "https://www.straitstimes.com/tech/rws-to-test-ai-across-its-hotels-and-attractions-in-5-million-push"
+        }
+      ]
+    },
+    {
+      "id": "empleo",
+      "nombre": "Jobs",
+      "items": [
+        {
+          "titular": "India plans thousands of new technical training places",
+          "resumen": "The Times of India reported on November 25 that the Indian Institutes of Technology plan to add about 6,000 places over eight to ten years, including 5,000 in robotics and physical AI. The first students are expected in 2027.",
+          "para_ti": "The expansion signals demand for people who combine software, engineering and practical automation skills. It is not a guarantee of future employment.",
+          "fuente": "The Times of India",
+          "url": "https://www.educationtimes.com/news/iits-to-add-6000-seats-in-robotics-physical-ai-and-space-technology-programmes-from-2027/articleshow/136160468.cms"
+        },
+        {
+          "titular": "Australian job cuts have multiple causes",
+          "resumen": "A Reuters roundup updated November 24 reported that Integrated Research plans to reduce its workforce by about 24%. The wider roundup describes restructuring, weak demand, cost pressures and AI adoption across different firms, not a single cause for every cut.",
+          "para_ti": "Workers should distinguish confirmed AI-related changes from ordinary business restructuring when assessing job risks.",
+          "fuente": "Reuters",
+          "url": "https://www.reuters.com/business/world-at-work/job-cuts-mount-at-australian-companies-2026-2026-11-18/"
+        }
+      ]
+    }
+  ],
+  "palabra": {
+    "termino": "AI compute",
+    "definicion": "The processing capacity, typically provided by specialized chips and servers, used to train AI models and run their predictions or responses."
+  }
+}
